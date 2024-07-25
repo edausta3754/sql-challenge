@@ -1,0 +1,16 @@
+select t1.customer_id,join_date,order_date,product_name,price 
+from sales t1 
+join menu t2 
+on t1.product_id=t2.product_id 
+join members t3 
+on t1.customer_id=t3.customer_id
+where t1.order_date < t3.join_date
+
+select t1.customer_id,join_date,sum(price) 
+from sales t1 
+join menu t2 
+on t1.product_id=t2.product_id 
+join members t3 
+on t1.customer_id=t3.customer_id
+where t1.order_date < t3.join_date
+group by t1.customer_id,t3.join_date
