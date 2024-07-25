@@ -1,0 +1,15 @@
+select t1.customer_id,join_date,'puan'=
+sum(case when t1.order_date BETWEEN t3.join_date and dateadd(day,6,t3.join_date) then
+     case when product_name in ('sushi','curry','ramen') then price*20
+    else 0
+    end 
+    when t1.order_date between dateadd(day,7,t3.join_date) and '2021-01-31'then 
+     case when t2.product_name='sushi' then price*20 
+          when product_name in ('curry','ramen') then price*10
+    else 0
+    end
+    end)
+from sales t1 join menu t2 
+on t1.product_id=t2.product_id join members t3 
+on t1.customer_id=t3.customer_id
+group by t1.customer_id,t3.join_date 
