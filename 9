@@ -1,0 +1,9 @@
+select customer_id,'puan'=
+sum(case product_name
+when 'sushi' then price*20
+when 'curry' then price*10
+when 'ramen' then price*10
+end)
+from sales t1 join menu t2 
+on t1.product_id=t2.product_id
+group by customer_id
