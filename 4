@@ -1,4 +1,0 @@
-select top 1 product_name, count(customer_id) as 'Sipariş Sayısı' from sales,menu 
-where  sales.product_id=menu.product_id 
-group by product_name
-order by count(customer_id) desc
