@@ -1,0 +1,7 @@
+select customer_id, order_date,product_name 
+from sales T1 join menu T2 
+on T1.product_id=T2.product_id
+where order_date=(
+    select min(order_date) from sales
+)
+order by customer_id
