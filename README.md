@@ -1,8 +1,8 @@
 # sql-challenge
 
+Vaka Çalışması #1 - Danny's Diner
 
-8 Week SQL Challenge
-Start your SQL learning journey today!
+
 
 Data With Danny Case Studies Getting Started Resources About
 Case Study #1 - Danny's Diner
