@@ -1,5 +1,8 @@
 # sql-challenge-study-case-1
 
+![1](https://github.com/user-attachments/assets/60e0a44d-3e85-4bdd-82ac-880a4ec91781)
+
+
 Vaka Çalışması #1 - Danny's Diner
 
 Introduction;
